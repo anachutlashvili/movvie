@@ -1,0 +1,95 @@
+
+
+#seriesPage 
+{
+    width: 90%;
+    margin: 40px auto;
+}
+
+#seriesPage h1 {
+    color: var(--white);
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+#seriesList {
+    display : grid;
+    grid-template-columns : repeat(5, minmax(0, 1fr));
+    gap: 25px;
+}
+#seriesList .series-card 
+
+
+{
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:12px;
+    position : relative;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#seriesList .series-card:hover {
+    transform: translateY(-10px);
+}
+
+#seriesList .series-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Series information */
+#seriesList .series-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+#seriesList .series-info h3 {
+    color: var(--white);
+    font-size: 18px;
+    margin: 0;
+}
+
+#seriesList .series-info p {
+    color: var(--text3);
+    font-size: 14px;
+    margin: 0;
+}
+
+#seriesList .series-info span {
+    color: var(--white);
+    font-size: 14px;
+}
+
+
+
+@media (max-width: 750px) {
+    #seriesList {
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    #seriesPage {
+       
+        width: 94%;
+    }
+
+    #seriesList {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    #seriesList 
+    .series-card img {
+        height: 220px;
+    }
+}
